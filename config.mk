@@ -75,7 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Sounds
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.notification_sound=Ping.ogg \
     ro.config.alarm_alert=Bright_morning.ogg
 
 # IME
@@ -88,3 +88,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay/common/
+
+		PRODUCT_COPY_FILES += \
+		    $(LOCAL_PATH)/etc/permissions/privapp-permissions-matchmaker.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-matchmaker.xml
